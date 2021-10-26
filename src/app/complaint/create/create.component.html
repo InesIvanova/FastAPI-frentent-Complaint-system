@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <form [formGroup]="complainForm" (ngSubmit)="create()">
+                    <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" formControlName="title">
+                    </div>
+                    <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows=10 formControlName="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label>Amount</label>
+                    <input type="number" class="form-control" formControlName="amount">
+                    </div>
+                    <div class="form-group">
+                        <label>Encoded photo</label>
+                        <textarea class="form-control" rows=10 formControlName="photo"></textarea>
+                        </div>
+                    <div class="from-group">
+                          <label>Extension</label>
+                    <input type="text" class="form-control" formControlName="photo_extension">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

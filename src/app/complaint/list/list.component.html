@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row" style="margin: 2rem;" *ngIf="display">
+        <div class="col-lg-4">
+            <button class="btn btn-success" (click)="redirectToCreate()">Create new complaint</button>
+        </div>
+    </div>
+    <div class="row" style="margin: 2rem;" *ngIf="role == 'admin'">
+        <div class="col-lg-4">
+            <button class="btn btn-success" (click)="createApprover()">Create approver</button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btn btn-warning" (click)="createAdmin()">Create admin</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2rem;">
+        <div class="col-lg-4" *ngFor="let c of complaints">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="object-fit: cover;" [src]="c.photo_url" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{c.title}}</h5>
+                  <h6 class="card-title">{{c.create_on}}</h6>
+                  <p class="card-text">{{c.description}}</p>
+                  <p class="card-text">{{c.amount}}</p>
+                  <p class="card-text">{{c.status}}</p>
+                 <div *ngIf="role == 'approver'">
+                    <a (click)="approve(c.id)" class="btn btn-success">Approve</a>
+                    <a (click)="reject(c.id)" class="btn btn-warning">Reject</a>
+                 </div>
+                 <div *ngIf="role == 'admin'">
+                    <a (click)="delete(c.id)" class="btn btn-danger">Delete</a>
+                 </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

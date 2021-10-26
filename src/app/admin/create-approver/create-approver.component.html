@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <h1>Create an approver</h1>
+    <div class="row">
+        <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                    </div>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" formControlName="first_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" formControlName="last_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" formControlName="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Encoded certificate</label>
+                        <textarea class="form-control" rows=10 formControlName="certificate"></textarea>
+                        </div>
+                    <div class="form-group">
+                        <label>Extension</label>
+                        <input type="text" class="form-control" formControlName="extension">
+                    </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
