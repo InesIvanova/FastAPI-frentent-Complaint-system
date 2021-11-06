@@ -24,15 +24,21 @@
                         <label>Phone</label>
                         <input type="text" class="form-control" formControlName="phone">
                     </div>
-                    <div class="form-group">
-                        <label>Encoded certificate</label>
-                        <textarea class="form-control" rows=10 formControlName="certificate"></textarea>
-                        </div>
-                    <div class="form-group">
-                        <label>Extension</label>
-                        <input type="text" class="form-control" formControlName="extension">
+                    <div class="from-group">
+                        <label>Photo</label>
+                        <input type="file" class="form-control" (change)="onFileChange($event)" >                    
                     </div>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                    <ngx-spinner
+                    bdColor="rgba(51,51,51,0.8)"
+                    size="medium"
+                    color="#fff"
+                    type="ball-scale-multiple"
+                  >
+                    <p style="font-size: 20px; color: white">Loading...</p>
+                  </ngx-spinner>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+ 
+
                 </form>
             </div>
         <div class="col-lg-4"></div>

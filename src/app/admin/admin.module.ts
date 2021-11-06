@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AdminRoutingModule } from './admin-routing.module';
 import { CreateApproverComponent } from './create-approver/create-approver.component';
 import { CreateAdminComponent } from './create-admin/create-admin.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -13,6 +14,7 @@ import { CreateAdminComponent } from './create-admin/create-admin.component';
     CommonModule,
     SharedModule,
     AdminRoutingModule,
+    NgxSpinnerModule,
   ],
   exports: [
     CreateApproverComponent,

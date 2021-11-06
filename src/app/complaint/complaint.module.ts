@@ -4,6 +4,7 @@ import { CreateComponent } from './create/create.component';
 import { SharedModule } from '../shared/shared.module';
 import { ComplaintRoutingModule } from './complaint-routing.module';
 import { ListComponent } from './list/list.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -13,6 +14,7 @@ import { ListComponent } from './list/list.component';
     CommonModule,
     SharedModule,
     ComplaintRoutingModule,
+    NgxSpinnerModule
   ],
   exports: [
     CreateComponent, ListComponent
