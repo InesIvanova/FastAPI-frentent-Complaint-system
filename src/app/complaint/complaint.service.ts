@@ -26,6 +26,7 @@ export class ComplaintService {
   }
 
   reject(id) {
+    
     return this.http.put(this.approversPath + id + "/reject", {})
   }
 
