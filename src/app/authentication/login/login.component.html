@@ -11,14 +11,14 @@
                     <label>Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">I am</label>
                         <select class="custom-select my-1 mr-sm-2" #mySelect id="inlineFormCustomSelectPref" (change)="changeWhoAmI(mySelect.value)">
                           <option selected value="">Complainer</option>
                           <option value="approvers/">Approver</option>
                           <option value="admins/">Admin</option>
                         </select>
-                    </div>
+                    </div> -->
                     <p>Does not have an account? <a [routerLink]="['register']" >Sign up</a></p>
                     <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
                 </form>

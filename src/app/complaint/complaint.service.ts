@@ -6,9 +6,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ComplaintService {
-  complaintsPath: string = environment.apiUrl + "complainers/complaints";
-  approversPath : string = environment.apiUrl + "approvers/complaints/"
-  adminPath: string = environment.apiUrl + "admins/complains/";
+  complaintsPath: string = environment.apiUrl + "complaints";
+  approversPath : string = environment.apiUrl + "complaints/"
+  adminPath: string = environment.apiUrl + "complaints/";
 
   constructor(private http: HttpClient) { }
   

@@ -6,15 +6,12 @@
     </div>
     <div class="row" style="margin: 2rem;" *ngIf="role == 'admin'">
         <div class="col-lg-4">
-            <button class="btn btn-success" (click)="createApprover()">Create approver</button>
-        </div>
-        <div class="col-lg-4">
-            <button class="btn btn-warning" (click)="createAdmin()">Create admin</button>
+            <button class="btn btn-warning" (click)="listUers()">Change roles</button>
         </div>
     </div>
     <div class="row" style="margin-top: 2rem;">
         <div class="col-lg-4" *ngFor="let c of complaints">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;margin-top: 2rem;">
                 <img class="card-img-top" style="object-fit: cover;" [src]="c.photo_url" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{c.title}}</h5>

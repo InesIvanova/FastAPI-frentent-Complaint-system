@@ -43,12 +43,8 @@ export class ListComponent implements OnInit {
     })
   }
 
-  createApprover() {
-    this.router.navigate(["admins/create/approver"])
-  }
-
-  createAdmin() {
-    this.router.navigate(["admins/create/admin"])
+  listUers() {
+    this.router.navigate(["users"])
   }
 
 }

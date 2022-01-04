@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { ComplaintModule } from './complaint/complaint.module';
 import { AdminModule } from './admin/admin.module';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AuthenticationModule,
     ComplaintModule,
     AdminModule,
+    UsersModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
